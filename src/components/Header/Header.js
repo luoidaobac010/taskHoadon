@@ -65,7 +65,7 @@ function Header(){
 
 							<DropdownItem>
 								<span className="fa fa-external-link fa__size" aria-hidden="true"></span>
-								Đăng xuất
+								Đăng xuất nè
 							</DropdownItem>
 						</DropdownMenu>
 					</Dropdown>
