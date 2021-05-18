@@ -2,6 +2,7 @@ import React from 'react';
 import {useState} from "react";
 import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import "./ShoppingCartTab.css";
 import BuyNote from "./Note/BuyNote";
 import OrderNote from "./Note/OrderNote";
