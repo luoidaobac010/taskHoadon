@@ -32,14 +32,14 @@ const data={
             image:  'https://www.queanhwater.com/wp-content/uploads/2015/10/N%C6%B0%E1%BB%9Bc-kho%C3%A1ng-la-vie-500ml_qu%E1%BA%BF-anh-water.png',
         },
         {
-            id:'2',
-            name: "Pepsi 700ml",
+            id:'5',
+            name: "Pepsi 250ml",
             price: 7500,
             image: 'https://4.imimg.com/data4/NP/JU/GLADMIN-184885/pepsi-cold-drink-500x500.jpg',
         },
         {
-            id:'2',
-            name: "Pepsi 700ml",
+            id:'7',
+            name: "Coca 250ml",
             price: 7500,
             image: 'https://4.imimg.com/data4/NP/JU/GLADMIN-184885/pepsi-cold-drink-500x500.jpg',
         },
