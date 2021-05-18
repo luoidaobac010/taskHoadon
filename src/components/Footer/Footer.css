@@ -1,0 +1,31 @@
+.footer{
+	width: 100%;
+	max-height: 100%;
+	background-color: #D3D3D3;
+	display: all;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+
+.footer__row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer__action__toolbar{
+	height: 21px;
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.footer__action__left{
+	float: left;
+}
+
+.footer__action__right{
+	float: right;
+}

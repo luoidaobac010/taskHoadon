@@ -1,0 +1,45 @@
+.content{
+	width: 100%;
+	height: 280px;
+	background-color: #ffffff ;
+	align-items: center;
+	top: 0;
+	z-index: 100;
+	padding-left: 0px;
+	margin-top: 5px;
+}
+
+.content__row{
+	padding-left: 5px;
+	padding-top: 10px;
+	width: 100%;
+	height: 56px;
+	border: 1px groove;
+	font-size: 10pt;
+	float: left;
+	display: block;
+}
+
+.text-right{
+	float:right;
+}
+
+.i__text{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.icon__delete{
+	padding-top: 5px ;
+}
+
+.add{
+	width: 21px;
+	height: 25px;
+}
+
+.remove{
+	width: 21px;
+	height: 25px;
+}
+

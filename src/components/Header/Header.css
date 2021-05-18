@@ -1,0 +1,68 @@
+.header{
+	background-color: #3385ff ;
+	display: flex;
+	align-items: center;
+	position: all;
+	top: 0;
+	z-index: 100;
+}
+
+.header__row{
+	display: contents;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.header__action__left{
+	float: left;
+	display: contents;
+}
+
+.header__action__right{
+	float: right;
+	display: contents;
+}
+
+
+.fa fa-bars{
+	height: 100%;
+	width: 100%;
+}
+
+.fa__size{
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
+.fa__edit{
+	color: white;
+	font-size: 20px;
+	padding-top: 1px;
+	margin-right: 20px;
+	padding-top: 5px;
+}
+
+.fa__edit__menu{
+	color: white;
+	font-size: 100%;
+
+}
+
+.barcode{
+	margin-right: 540px ;
+	padding-left: 350px;
+
+}
+
+
+.DropdownItem{
+	background-color: #3385ff;
+	font-size: 20px;
+	height: 30px;
+	padding-right: 5px;
+}
+
+.Dmenu{
+	height: 30px;
+}

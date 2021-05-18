@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  font-size: 13px;
+}
+
+.head{
+	width: 100%;
+}
+
+.body{
+	height: 100%;
+	width: 1000px;
+	background-color: #ffffff ;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+
+.body__row{
+	display:block;
+	z-index: -1;
+	margin-right: 5px;
+	margin-left: 5px;
+}
