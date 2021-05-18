@@ -47,14 +47,6 @@
 	border: 10px solid;
 }
 
-.btn {
-
-	color: black;
-	padding: 0px 10px 0 10px ;
-
-	shape-margin: 5px;
-	cursor: pointer;
-}
 
 .default {
   border-color: #e7e7e7;
