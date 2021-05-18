@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from "react";
-import {Popover} from "@material-ui/core";
+import Popover from '@material-ui/core/Popover';
+import Typography from '@material-ui/core/Typography';
 import "./ShoppingCartTab.css";
 import BuyNote from "./Note/BuyNote";
 import OrderNote from "./Note/OrderNote";
@@ -12,13 +13,24 @@ export default function ShoppingCartTab(props) {
     setToggleState(index);
     };
 
+    /*Popover*/
     const [anchor, setAnchor] = useState(null);
+
     const openPopover = (event) => {
         setAnchor(event.currentTarget);
     }
 
-    const {cartProduct,countCartProduct}=props;
+    const closePopover=()=>{
+        setAnchor(null);
+    }
+
+    const open = Boolean(anchor);
+
+    const id = open ? 'popover':undefined;
+
     /** Tính tiền */
+    const {cartProduct,countCartProduct}=props;
+    
     const totalPrice = cartProduct.reduce((a,c) => a +c.price * c.qty, 0);
    
     return (
@@ -50,12 +62,24 @@ export default function ShoppingCartTab(props) {
                             
                                 <div className="col-md-6">Giảm giá</div>
                                 <div className="col-6 text-right">
-                                    <button className="Sale__off" onClick={openPopover}>{totalPrice}</button>
-                                    <Popover 
-                                        open={false} 
-                                        anchorEl={anchor}
+                                    <button className="Sale__off" aria-describedby={id} onClick={openPopover}>{totalPrice}</button>
+                                    <Popover
+                                        id={id}
+                                        open={open}
+                                        anchor={anchor}
+                                        onClose={closePopover}
+                                        anchorOrigin={{
+                                            vertical: 'center',
+                                            horizontal: 'right'
+                                        }}
+                                        transformOrigin={{
+                                            vertical: 'center',
+                                            horizontal: 'right'
+                                        }}
                                     >
-                                        <i>Hello</i>
+
+                                        <Typography>The content of the Popover.</Typography>
+
                                     </Popover>
                                 </div>                                
                                 
