@@ -12,6 +12,7 @@ export default function BuyNote() {
       <FormControl className="Buy__Note" >
         <InputLabel htmlFor="input-with-icon-pencil" />
         <Input
+            success
             placeholder="Ghi chú"
             id="input-with-icon-pencil"
             startAdornment={

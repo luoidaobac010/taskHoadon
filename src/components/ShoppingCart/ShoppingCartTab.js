@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import "./ShoppingCartTab.css";
 import BuyNote from "./Note/BuyNote";
 import OrderNote from "./Note/OrderNote";
+import SaleOffBuy from "./ButtonPopper/SaleOffBuy";
 
 export default function ShoppingCartTab(props) {
     const [toggleState, setToggleState] = useState(1);
@@ -13,21 +14,6 @@ export default function ShoppingCartTab(props) {
     const toggleTab = (index) => {
     setToggleState(index);
     };
-
-    /*Popover*/
-    const [anchor, setAnchor] = useState(null);
-
-    const openPopover = (event) => {
-        setAnchor(event.currentTarget);
-    }
-
-    const closePopover=()=>{
-        setAnchor(null);
-    }
-
-    const open = Boolean(anchor);
-
-    const id = open ? 'popover':undefined;
 
     /** Tính tiền */
     const {cartProduct,countCartProduct}=props;
@@ -58,30 +44,12 @@ export default function ShoppingCartTab(props) {
                                     <button className="badge">{countCartProduct}</button>
                                 </div>
 
-                                <div className="col-6 text-right">{totalPrice.toFixed(2)}</div>
+                                <div className="col-6 text-right">{totalPrice}</div>
                             
                             
                                 <div className="col-md-6">Giảm giá</div>
-                                <div className="col-6 text-right">
-                                    <button className="Sale__off" aria-describedby={id} onClick={openPopover}>{totalPrice}</button>
-                                    <Popover
-                                        id={id}
-                                        open={open}
-                                        anchor={anchor}
-                                        onClose={closePopover}
-                                        anchorOrigin={{
-                                            vertical: 'center',
-                                            horizontal: 'right'
-                                        }}
-                                        transformOrigin={{
-                                            vertical: 'center',
-                                            horizontal: 'right'
-                                        }}
-                                    >
-
-                                        <Typography>The content of the Popover.</Typography>
-
-                                    </Popover>
+                                <div className="col-6 text-right">                                    
+                                    <SaleOffBuy  totalPrice={totalPrice} />                                  
                                 </div>                                
                                 
                                 <div className="col-md-6"><strong>Khách cần trả</strong></div>
