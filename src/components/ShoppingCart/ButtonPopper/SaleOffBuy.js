@@ -6,11 +6,17 @@ import Button from '@material-ui/core/Button';
 import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import Input from '@material-ui/core/Input';
+import {useState} from "react";
+import BoxDiscountBuy from "./BoxDiscountBuy"
 
 export default function SaleOffBuy(props) {
- 
+
+    const{setDiscount,getDiscount} = useState(0);
+
+    /* Xử lí giảm giá theo phần trăm */
     const {totalPrice} = props;
 
+    /* Xử lí Popper(Hộp thoại)*/
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [open, setOpen] = React.useState(false);
     const [placement, setPlacement] = React.useState();
@@ -29,12 +35,7 @@ export default function SaleOffBuy(props) {
                         <Paper>
                             <Typography className="Box__Click">
                                 <div >
-                                    <label>
-                                        <span className="name__label col-md-4">  Giảm giá  </span>
-                                        <span className="text__right col-md-4"> <Input defaultValue="0"  success inputProps={{ 'aria-label': 'description' }} /> </span>
-                                        <a type="button" className="Box__Click btn btn-success col-md-2">VND</a>
-                                        <a type="button" className="Box__Click btn btn-default col-md-2"> % </a>
-                                    </label>
+                                    <BoxDiscountBuy/>
                                 </div>
                                 
                             </Typography>

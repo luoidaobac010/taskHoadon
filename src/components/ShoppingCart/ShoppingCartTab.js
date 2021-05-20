@@ -7,16 +7,17 @@ import "./ShoppingCartTab.css";
 import BuyNote from "./Note/BuyNote";
 import OrderNote from "./Note/OrderNote";
 import SaleOffBuy from "./ButtonPopper/SaleOffBuy";
+import BoxDiscountBuy from "./ButtonPopper/BoxDiscountBuy"
 
 export default function ShoppingCartTab(props) {
     const [toggleState, setToggleState] = useState(1);
-
+    ;
     const toggleTab = (index) => {
     setToggleState(index);
     };
 
     /** Tính tiền */
-    const {cartProduct,countCartProduct}=props;
+    const {cartProduct,countCartProduct,total}=props;
     
     const totalPrice = cartProduct.reduce((a,c) => a +c.price * c.qty, 0);
    
@@ -49,7 +50,7 @@ export default function ShoppingCartTab(props) {
                             
                                 <div className="col-md-6">Giảm giá</div>
                                 <div className="col-6 text-right">                                    
-                                    <SaleOffBuy  totalPrice={totalPrice} />                                  
+                                    <SaleOffBuy totalPrice={totalPrice}/>                                  
                                 </div>                                
                                 
                                 <div className="col-md-6"><strong>Khách cần trả</strong></div>
