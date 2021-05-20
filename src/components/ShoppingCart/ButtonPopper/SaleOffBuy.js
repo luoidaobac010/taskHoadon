@@ -28,10 +28,15 @@ export default function SaleOffBuy(props) {
                     <Fade {...TransitionProps} timeout={350}>
                         <Paper>
                             <Typography className="Box__Click">
-                                <label>Giảm giá  </label>
-                                <Input className="text__right"  success inputProps={{ 'aria-label': 'description' }} />
-                                <a type="button" className="Box__Click btn btn-success">VND</a>
-                                <a type="button" className="Box__Click btn btn-default"> % </a>
+                                <div >
+                                    <label>
+                                        <span className="name__label col-md-4">  Giảm giá  </span>
+                                        <span className="text__right col-md-4"> <Input defaultValue="0"  success inputProps={{ 'aria-label': 'description' }} /> </span>
+                                        <a type="button" className="Box__Click btn btn-success col-md-2">VND</a>
+                                        <a type="button" className="Box__Click btn btn-default col-md-2"> % </a>
+                                    </label>
+                                </div>
+                                
                             </Typography>
                         </Paper>
                     </Fade>
