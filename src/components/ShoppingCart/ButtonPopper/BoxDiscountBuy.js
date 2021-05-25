@@ -42,8 +42,10 @@ class BoxDiscountBuy extends React.Component {
                   value={this.state.discount}
                   onChange={this.handleChange}
                   type="number"
-                  min="0"/>
-                
+                  min="0"
+                />
+                <button type="button" onClick={this.state.total} className="btn btn-success"> % </button>
+                <button type="button" className="btn btn-default">VND</button>
               </label>
 
                

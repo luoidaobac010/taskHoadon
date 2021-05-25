@@ -14,7 +14,7 @@ export default function SaleOffBuy(props) {
     const{setDiscount,getDiscount} = useState(0);
 
     /* Xử lí giảm giá theo phần trăm */
-    const {totalPrice} = props;
+    const {total}=props;
 
     /* Xử lí Popper(Hộp thoại)*/
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -35,7 +35,7 @@ export default function SaleOffBuy(props) {
                         <Paper>
                             <Typography className="Box__Click">
                                 <div >
-                                    <BoxDiscountBuy/>
+                                    <BoxDiscountBuy total={total}/>
                                 </div>
                                 
                             </Typography>
@@ -47,7 +47,7 @@ export default function SaleOffBuy(props) {
             <Grid >
                 <Grid className="Sale__Off__Buy">
                     
-                    <a type="button" color="default" onClick={handleClick('left')}>{totalPrice}</a>
+                    <a type="button" color="default" onClick={handleClick('left')}>{total}</a>
                     
                 </Grid>
             </Grid>
