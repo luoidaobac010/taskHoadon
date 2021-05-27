@@ -10,12 +10,7 @@ import {useState} from "react";
 import BoxDiscountBuy from "./BoxDiscountBuy"
 
 export default function SaleOffBuy(props) {
-
-    const{setDiscount,getDiscount} = useState(0);
-
-    /* Xử lí giảm giá theo phần trăm */
-    const {total}=props;
-
+    const [num, setNum] = React.useState(0);
     /* Xử lí Popper(Hộp thoại)*/
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [open, setOpen] = React.useState(false);
@@ -34,8 +29,22 @@ export default function SaleOffBuy(props) {
                     <Fade {...TransitionProps} timeout={350}>
                         <Paper>
                             <Typography className="Box__Click">
-                                <div >
-                                    <BoxDiscountBuy total={total}/>
+                                <div>
+                                    <>
+                                      <label>
+                                        Giảm giá
+                                        <input
+                                            type="number"
+                                            min={0}
+                                            max={100}
+                                            step={1}
+                                            value={num}
+                                            onChange={e => setNum(e.target.value)}
+                                          />
+                                        <button type="button" className="btn btn-success"> % </button>
+                                        <button type="button" className="btn btn-default">VND</button>
+                                      </label>
+                                    </>
                                 </div>
                                 
                             </Typography>
@@ -47,7 +56,7 @@ export default function SaleOffBuy(props) {
             <Grid >
                 <Grid className="Sale__Off__Buy">
                     
-                    <a type="button" color="default" onClick={handleClick('left')}>{total}</a>
+                    <a type="button" color="default" onClick={handleClick('left')}>{num}</a>
                     
                 </Grid>
             </Grid>

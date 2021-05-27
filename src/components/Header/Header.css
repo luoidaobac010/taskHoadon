@@ -50,11 +50,22 @@
 }
 
 .barcode{
-	margin-right: 540px ;
-	padding-left: 350px;
+	margin-right: 5px ;
+	padding-left: 300px;
 
 }
 
+.headtab{
+	margin-right: 400px ;
+	padding-left: 100px;
+	width: 100px;
+	
+}
+
+.headtab .button{	
+	width: 60px;
+	font-size: 10px;
+}
 
 .DropdownItem{
 	background-color: #3385ff;

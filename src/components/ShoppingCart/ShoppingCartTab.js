@@ -10,9 +10,9 @@ import SaleOffBuy from "./ButtonPopper/SaleOffBuy";
 
 export default function ShoppingCartTab(props) {
     const [toggleState, setToggleState] = useState(1);
-    ;
+
     const toggleTab = (index) => {
-    setToggleState(index);
+        setToggleState(index);
     };
 
     /** Tính tiền */
@@ -20,7 +20,7 @@ export default function ShoppingCartTab(props) {
     
     const totalPrice = cartProduct.reduce((a,c) => a +c.price * c.qty, 0);
     
-    const total=0;
+
 
     return (
         <div className="Tab__container">
@@ -51,7 +51,7 @@ export default function ShoppingCartTab(props) {
                             
                                 <div className="col-md-6">Giảm giá</div>
                                 <div className="col-6 text-right">                                    
-                                    <SaleOffBuy total={total}/>                                  
+                                    <SaleOffBuy />                                  
                                 </div>                                
                                 
                                 <div className="col-md-6"><strong>Khách cần trả</strong></div>

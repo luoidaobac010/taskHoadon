@@ -3,11 +3,17 @@ import {useState} from "react";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import './Header.css';
 import SearchProduct from  "../Search/SearchProduct";
+import Popover from '@material-ui/core/Popover';
+import Typography from '@material-ui/core/Typography';
 
 function Header(){
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const toggle = () => setDropdownOpen(prevState => !prevState);
 	
+	const [toggleState, setToggleState] = useState(1);
+    const toggleTab = (index) => {
+        setToggleState(index);
+    };
 	return(
 		<nav className="header">
 			
@@ -17,6 +23,12 @@ function Header(){
 					<div className="barcode">
 						<i type="button" className="fa fa-barcode fa__edit" title="Chế độ nhập" aria-hidden="true"></i>
 					</div>
+					<div className="headtab">
+						<button className={toggleState === 1 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(1)} >
+							Hoá đơn 1
+		            	</button>
+					</div>
+					
 				</div>
 				<div className="header__action__right">
 					<i type="button" className="fa fa-map-marker fa__edit" title="Chi nhánh trung tâm" aria-hidden="true"></i>
