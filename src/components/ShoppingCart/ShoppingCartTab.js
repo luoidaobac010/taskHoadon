@@ -16,11 +16,11 @@ export default function ShoppingCartTab(props) {
     };
 
     /** Tính tiền */
-    const {cartProduct,countCartProduct}=props;
+    const {cartProduct,countCartProduct,num}=props;
     
     const totalPrice = cartProduct.reduce((a,c) => a +c.price * c.qty, 0);
     
-
+    const finalPrice = ({totalPrice} - ({totalPrice}*{num}/100).toFixed(2));
 
     return (
         <div className="Tab__container">
@@ -51,11 +51,11 @@ export default function ShoppingCartTab(props) {
                             
                                 <div className="col-md-6">Giảm giá</div>
                                 <div className="col-6 text-right">                                    
-                                    <SaleOffBuy />                                  
+                                    <SaleOffBuy num={num}/>                                  
                                 </div>                                
                                 
                                 <div className="col-md-6"><strong>Khách cần trả</strong></div>
-                                <div className="col-6 text-right font__cus"><strong>{totalPrice}</strong></div>
+                                <div className="col-6 text-right font__cus"><strong>{finalPrice}</strong></div>
                                 
                                 <div className="col-md-6">Khách thanh toán (F8)</div>
                                 <div className="col-6 text-right"><span><i class="fa fa-credit-card-alt" aria-hidden="true"></i></span>{totalPrice}</div>  
