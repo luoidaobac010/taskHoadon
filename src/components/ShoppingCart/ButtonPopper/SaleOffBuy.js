@@ -30,6 +30,7 @@ export default function SaleOffBuy(props) {
                         <Paper>
                             <Typography className="Box__Click">
                                     <>
+                                        <div>{num}</div>
                                       <label>
                                         Giảm giá
                                         <input
