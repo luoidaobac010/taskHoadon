@@ -29,10 +29,9 @@ export default function SaleOffBuy(props) {
                     <Fade {...TransitionProps} timeout={350}>
                         <Paper>
                             <Typography className="Box__Click">
-                                    <>
-                                        <div>{num}</div>
+                                    <div className="Sale__Off__Buy">
                                       <label>
-                                        Giảm giá
+                                        <span> Giảm giá </span>
                                         <input
                                             type="number"
                                             min={0}
@@ -44,7 +43,7 @@ export default function SaleOffBuy(props) {
                                         <button type="button" className="btn btn-success"> % </button>
                                         <button type="button" className="btn btn-default">VND</button>
                                       </label>
-                                    </>
+                                    </div>
                                 
                             </Typography>
                         </Paper>
